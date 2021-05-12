@@ -13,7 +13,16 @@ This article explains how to install and update the Whatfix Android SDK in your 
 
 ### **Integration:**
 
-#### Step 1: Add Whatfix Maven repo URL in your build
+
+### Step 1: Update 
+You need to insert your API key. Go to a file named local.properties and find the value of **ent_name** and **ent_id**. Replace " " with "YOUR-ENT-NAME" and "YOUR-ENT-ID" respectively.
+```
+ent_name = "YOUR-ENT-NAME";
+ent_id = "YOUR-ENT-ID";
+``` 
+To get your ENT ID & ENT NAME, email us at <support@whatfix.com> or get in touch with your Account Manager.
+
+#### Step 2: Add Whatfix Maven repo URL in your build
 
 Add maven `{ url 'https://jitpack.io' }`in Gradle root
 
@@ -27,7 +36,7 @@ Add maven `{ url 'https://jitpack.io' }`in Gradle root
 }
 ```
 
-#### Step 2: Add the Whatfix SDK dependency 
+#### Step 3: Add the Whatfix SDK dependency 
 
 Add bintray link in the app gradle dependency.
 
@@ -40,9 +49,13 @@ implementation 'org.bitbucket.whatfix:whatfix-android:$sdk-version'
 where $sdk-version is the latest version of the SDK available which is [![](https://jitpack.io/v/org.bitbucket.whatfix/whatfix-android.svg)](https://jitpack.io/#org.bitbucket.whatfix/whatfix-android)
 
 
-#### Step 3: Initialize Whatfix in your project
+#### Step 4: Initialize Whatfix in your project
 
 Initialize Whatfix in your **Application** class using the <ent_name> and <ent_id> provided to you.
+
+If already updated in **local.properties** file, do nothing.
+
+ELSE
 
 **Java:**
 
@@ -58,7 +71,7 @@ Whatfix.initialize(application, "<ent_name>", "<ent_id>")
 ```
 
 
-Replace <ent_id> & <ent_name> with your Whatfix account ID and NAME . To get your ENT ID & ENT NAME, email us at <support@whatfix.com> or get in touch with your Account Manager.
+Replace <ent_id> & <ent_name> with your Whatfix account ID and NAME . 
 
 ### Other APIs
 
