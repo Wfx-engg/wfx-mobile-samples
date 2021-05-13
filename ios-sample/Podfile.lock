@@ -1,0 +1,16 @@
+PODS:
+  - WhatFix (1.0.3)
+
+DEPENDENCIES:
+  - WhatFix (~> 1.0.3)
+
+SPEC REPOS:
+  trunk:
+    - WhatFix
+
+SPEC CHECKSUMS:
+  WhatFix: bd1fe204d527fdc442f1297b56ada0c572993e61
+
+PODFILE CHECKSUM: 4f221765d5253eb55dc4d30ed2000bc13d70fb2b
+
+COCOAPODS: 1.10.1

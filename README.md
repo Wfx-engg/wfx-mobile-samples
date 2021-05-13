@@ -15,3 +15,5 @@ Replace <ent_id> & <ent_name> with your Whatfix account ID and NAME . To get you
 See documentation:
 
 <a href="android-sample/README.md">Android Sample</a>
+
+<a href="ios-sample/">iOS Sample</a>
