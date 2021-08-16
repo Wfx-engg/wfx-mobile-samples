@@ -13,7 +13,7 @@ import * as Animatable from 'react-native-animatable';
 import LinearGradient from 'react-native-linear-gradient';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
-
+import RNWhatfixModule from 'rn-whatfix';
 import {useTheme} from 'react-native-paper';
 
 import {AuthContext} from '../components/context';
@@ -91,7 +91,13 @@ const SignInScreen = ({navigation}) => {
 
   const loginHandle = (userName, password) => {
     const foundUser = Users.filter(item => {
-      return userName == item.username && password == item.password;
+      let isValidLogin = userName == item.username && password == item.password;
+      if (isValidLogin) {
+        RNWhatfixModule.setLoggedInUserId(item.username);
+        RNWhatfixModule.setLoggedInUserRole(item.userRole);
+        console.log('Akanksha ' + item.username + ' ' + item.userRole);
+      }
+      return isValidLogin;
     });
 
     if (data.username.length == 0 || data.password.length == 0) {

@@ -171,6 +171,13 @@ function App() {
       'Home',
     );
     RNWhatfixModule.setEditorMode(false, true);
+    let obj = {
+      color: 'blue',
+      level: '31',
+      precision: '1000.456',
+      isEasy: 'true',
+    };
+    RNWhatfixModule.setCustomKeyValue(obj);
   }, []);
 
   if (loginState.isLoading) {

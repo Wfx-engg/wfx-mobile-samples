@@ -5,6 +5,7 @@ export default (Users = [
     username: 'user1',
     password: 'password',
     userToken: 'token123',
+    userRole: 'manager',
   },
   {
     id: 2,
@@ -12,6 +13,7 @@ export default (Users = [
     username: 'user2',
     password: 'pass1234',
     userToken: 'token12345',
+    userRole: 'editor',
   },
   {
     id: 3,
@@ -19,5 +21,6 @@ export default (Users = [
     username: 'testuser',
     password: 'testpass',
     userToken: 'testtoken',
+    userRole: 'translator',
   },
 ]);
